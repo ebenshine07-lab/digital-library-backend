@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=PostgreSQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    open-in-view: false
+
+app:
+  jwt:
+    secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+    access-token-expiration-ms: 3600000
+    refresh-token-expiration-ms: 7200000
+    issuer: DigitalLibrarySystemTest
+
+  supabase:
+    url: https://mock-supabase.test
+    anon-key: test-anon-key
+    service-role-key: test-service-role-key
+    bucket-pdfs: test-pdfs
+    bucket-covers: test-covers
+    signed-url-duration-seconds: 300
+
